@@ -32,3 +32,36 @@ nav ul li{
     border-bottom: 5px solid lightblue;
    
 }
+
+main{
+    background-color: white;
+    position: relative;
+    top: -700px;
+    padding-top: 30px;
+}
+
+aside h3{
+    display: flex;
+    justify-content: end;
+    text-indent: -45px;
+    font-size: 35px;
+    border-right: 5px solid darkslateblue;
+    margin: 0 800px 0 0;
+}
+
+.barn-door{
+    max-width: 100%;
+    height: auto; 
+    position: relative;
+    top: -70px;
+    z-index: -1;
+}
+
+.work-links{
+    max-width: 100%;
+    height: auto; 
+}
+
+.main-p{
+    
+}
