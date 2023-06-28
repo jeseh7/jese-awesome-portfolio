@@ -1,72 +1,129 @@
+:root{
+    --image-height: 30vh;
+    --image-width: 70vh;
+}
+
 *{
     font-family: "Times New Roman"
 }
 
+header{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: rgb(65, 65, 65);
+    justify-content: space-between;
+}
+
 h1{
-    position: relative;
     font-size: 50px;
     text-indent: 100px;
     color: rgb(65, 65, 65);
-    height: 50px;
-    width: 200px;
     margin: 10px 0;
     background-color: lightblue;
-    background-position: -45px;
-    z-index: 2;
+    background-position: 5px;
+    padding-right: 10px;
 }
 
 nav ul{
-    position: relative;
-    top: -70px;
     font-size: 20px;
-    display: flex;
-    justify-content: end;
+    text-align: right;
     padding: 20px;
-    background-color: rgb(65, 65, 65);
 }
 
 nav ul li{
     color: lightblue;
     padding: 5px 10px;
     margin: 0 15px;
-    border-bottom: 5px solid lightblue;  
+    border-bottom: 5px solid lightblue; 
+    display: inline; 
 }
 
-main{
-    background-color: white;
-    position: relative;
-    top: -700px;
-    padding-top: 30px;
+img{
+    max-width: 100%;
+    height: auto;
 }
 
 h3{
-    display: flex;
-    justify-content: end;
-    text-indent: -45px;
+    color: slateblue;
     font-size: 40px;
-    color: steelblue;
-    margin: 0 950px 0 0;
+    text-align: right;
 }
 
-.barn-door{
-    max-width: 100%;
-    height: auto; 
-    position: relative;
-    top: -70px;
-    z-index: -1;
+footer{
+    display: inline;
 }
 
-.work-links{
-    max-width: 100%;
-    height: auto; 
+.hero{
+    min-height: 20vh;
+    background-image: url("../images/barn-door.jpeg");
+    background-size: cover;
 }
 
-.main-p{
-    display: inline-block;
-    margin-top: -70px;
-    margin-left: 20em;
-    border-left: 5px solid steelblue;
-    line-height: 2;
-    padding-left: 15px;
-    
+.about-container{
+    display: flex;
+    justify-content: center;
+}
+
+.about-container > h3{
+    flex-basis: 20%;
+    border-right: 2px solid slateblue;
+    margin-right: 20px;
+    padding-right: 10px;
+}
+
+.about-container > p{
+    flex-basis: 70%;
+}
+
+.work-container{
+    display: flex;
+    justify-content: center;
+}
+
+.work-container > h3{
+    flex-basis: 20%;
+    border-right: 2px solid slateblue;
+    margin-right: 20px;
+    padding-right: 10px;
+}
+
+.work-container > div{
+    flex-basis: 70%;
+}
+/*
+.photo-bundle{
+    display: flex;
+}
+*/
+
+
+.surf{
+    background-image: url("../images/surf-report.jpeg");
+    background-size: cover;
+    min-height: 80vh;
+    width: 600px;
+}
+.led{
+    background-image: url("../images/led-wall.jpeg");
+    background-size: cover;
+    min-height: var(--image-height);
+    width: var(--image-width);
+}
+.caluclator{
+    background-image: url("../images/calculator.jpeg");
+    background-size: cover;
+    min-height: var(--image-height);
+    width: var(--image-width);
+}
+.pastel{
+    background-image: url("../images/pastel-puzzles.jpeg");
+    background-size: cover;
+    min-height: var(--image-height);
+    width: var(--image-width);
+}
+.run{
+    background-image: url("../images/run-buddy.jpeg");
+    background-size: cover;
+    min-height: var(--image-height);
+    width: var(--image-width);
 }
