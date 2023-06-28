@@ -1,6 +1,10 @@
 :root{
     --image-height: 30vh;
     --image-width: 70vh;
+    --lighter-blue: lightblue;
+    --darker-blue: slateblue;
+    --four-margin: 10px;
+    --four-border: 4px solid lightblue;
 }
 
 *{
@@ -14,12 +18,17 @@ header{
     justify-content: space-between;
 }
 
+a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
 h1{
     font-size: 50px;
     text-indent: 100px;
     color: rgb(65, 65, 65);
     margin: 10px 0;
-    background-color: lightblue;
+    background-color: var(--lighter-blue);
     background-position: 5px;
     padding-right: 10px;
 }
@@ -31,26 +40,28 @@ nav ul{
 }
 
 nav ul li{
-    color: lightblue;
+    color: var(--lighter-blue);
     padding: 5px 10px;
     margin: 0 15px;
-    border-bottom: 5px solid lightblue; 
+    border-bottom: 5px solid var(--lighter-blue);
     display: inline; 
 }
 
-img{
-    max-width: 100%;
-    height: auto;
-}
-
 h3{
-    color: slateblue;
+    color: var(--darker-blue);
     font-size: 40px;
     text-align: right;
 }
 
-footer{
+footer ul{
+    padding: 30px 0;
+}
+footer ul li{
     display: inline;
+    color: darkslategray;
+    padding: 5px 10px;
+    margin: 0 15px;
+    border-bottom: 5px solid var(--darker-blue);
 }
 
 .hero{
@@ -62,11 +73,12 @@ footer{
 .about-container{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
 }
 
 .about-container > h3{
     flex-basis: 20%;
-    border-right: 2px solid slateblue;
+    border-right: 2px solid var(--darker-blue);
     margin-right: 20px;
     padding-right: 10px;
 }
@@ -78,11 +90,13 @@ footer{
 .work-container{
     display: flex;
     justify-content: center;
+    margin-top: 20px;
+
 }
 
 .work-container > h3{
     flex-basis: 20%;
-    border-right: 2px solid slateblue;
+    border-right: 2px solid var(--darker-blue);
     margin-right: 20px;
     padding-right: 10px;
 }
@@ -90,40 +104,97 @@ footer{
 .work-container > div{
     flex-basis: 70%;
 }
-/*
-.photo-bundle{
+
+
+.four-images{
     display: flex;
 }
-*/
 
+.match-width{
+    width: 70vh;
+}
 
 .surf{
     background-image: url("../images/surf-report.jpeg");
     background-size: cover;
     min-height: 80vh;
-    width: 600px;
+    width: 143vh;
+    opacity: 0.5;
+    transition: 0.3s;
+    border: var(--four-border);
+}
+.surf:hover{
+    opacity: 1;
 }
 .led{
-    background-image: url("../images/led-wall.jpeg");
-    background-size: cover;
+    background-image: url("../images/led-wall.jpeg"); 
+    background-size: cover; 
     min-height: var(--image-height);
     width: var(--image-width);
+    margin: 10px 10px 10px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    border: var(--four-border);
+    opacity: 0.5;
+    transition: 0.3s;
 }
-.caluclator{
+.led:hover{
+    opacity: 1;
+}
+.calculator{
     background-image: url("../images/calculator.jpeg");
     background-size: cover;
     min-height: var(--image-height);
     width: var(--image-width);
+    margin: 10px 10px 10px 0;
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    border: var(--four-border);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.calculator:hover{
+    opacity: 1;
 }
 .pastel{
     background-image: url("../images/pastel-puzzles.jpeg");
     background-size: cover;
     min-height: var(--image-height);
     width: var(--image-width);
+    margin: var(--four-margin);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    border: var(--four-border);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.pastel:hover{
+    opacity: 1;
 }
 .run{
     background-image: url("../images/run-buddy.jpeg");
     background-size: cover;
     min-height: var(--image-height);
     width: var(--image-width);
+    margin: var(--four-margin);
+    background-repeat: no-repeat;
+    background-origin: content-box;
+    border: var(--four-border);
+    opacity: 0.5;
+    transition: 0.3s;
+}
+.run:hover{
+    opacity: 1;
+}
+.contact-me{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.contact-me > h3{
+    flex-basis: 20%;
+    border-right: 2px solid var(--darker-blue);
+    margin-right: 20px;
+    padding-right: 10px;
 }
